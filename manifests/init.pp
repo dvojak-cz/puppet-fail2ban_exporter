@@ -81,9 +81,7 @@ class fail2ban_exporter (
   Class['fail2ban_exporter::install'] -> Class['fail2ban_exporter::service']
 
   if $manage_python {
-    class { 'python':
-      version => 'python3',
-    }
+    ensure_resource('class', 'python', { version => 'python3' })
 
     Class['python'] -> Class['fail2ban_exporter::service']
   }
