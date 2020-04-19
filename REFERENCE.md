@@ -51,6 +51,14 @@ Directory where binaries are located.
 
 Default value: '/usr/local/bin'
 
+##### `base_url`
+
+Data type: `Stdlib::HTTPUrl`
+
+Base URL for Fail2ban Exporter.
+
+Default value: 'https://github.com/Kylapaallikko/fail2ban_exporter/archive'
+
 ##### `download_extension`
 
 Data type: `String`
@@ -97,7 +105,7 @@ Data type: `String`
 
 User running fail2ban_exporter.
 
-Default value: 'fail2ban_exporter'
+Default value: 'root'
 
 ##### `group`
 
@@ -105,7 +113,7 @@ Data type: `String`
 
 Group under which fail2ban_exporter is running.
 
-Default value: 'fail2ban_exporter'
+Default value: 'root'
 
 ##### `user_shell`
 
@@ -163,14 +171,6 @@ Data type: `Array[String]`
 Python required package list.
 
 Default value: ['prometheus_client']
-
-##### `base_url`
-
-Data type: `Stdlib::HTTPUrl`
-
-
-
-Default value: 'https://github.com/Kylapaallikko/fail2ban_exporter/archive'
 
 ### fail2ban_exporter::install
 

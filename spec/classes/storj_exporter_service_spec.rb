@@ -11,8 +11,8 @@ describe 'fail2ban_exporter::service' do
       [
         {
           bin_dir: '/usr/local/bin',
-          user: 'fail2ban_exporter',
-          group: 'fail2ban_exporter',
+          user: 'root',
+          group: 'root',
           ensure: 'running',
           listen_address: '127.0.0.1',
           listen_port: 9_180,

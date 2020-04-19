@@ -55,8 +55,8 @@ class fail2ban_exporter (
   # User Management
   Boolean                                          $manage_user              = true,
   Boolean                                          $manage_group             = true,
-  String                                           $user                     = 'fail2ban_exporter',
-  String                                           $group                    = 'fail2ban_exporter',
+  String                                           $user                     = 'root',
+  String                                           $group                    = 'root',
   Stdlib::Absolutepath                             $user_shell               = '/bin/false',
   Array[String]                                    $extra_groups             = [],
 
