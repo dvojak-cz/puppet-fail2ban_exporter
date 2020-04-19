@@ -1,0 +1,18 @@
+# THIS FILE IS MANAGED BY PUPPET
+[Unit]
+Description=Fail2ban Exporter service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=<%= @user %>
+Group=<%= @group %>
+Type=simple
+Environment=LISTEN_ADDRESS=<%= @listen_address %>
+Environment=LISTEN_PORT=<%= @listen_port %>
+ExecStart=<%= @bin_dir %>/fail2ban_exporter
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
