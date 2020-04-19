@@ -62,7 +62,7 @@ class fail2ban_exporter (
 
   # Service
   Variant[Stdlib::Ensure::Service, Enum['absent']] $service_ensure           = 'running',
-  Stdlib::Host                                     $listen_address           = '127.0.0.1',
+  Stdlib::Host                                     $listen_address           = '0.0.0.0',
   Stdlib::Port                                     $listen_port              = 9180,
 
   # Extra Management

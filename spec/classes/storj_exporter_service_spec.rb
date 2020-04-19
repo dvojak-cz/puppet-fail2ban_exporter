@@ -14,7 +14,7 @@ describe 'fail2ban_exporter::service' do
           user: 'root',
           group: 'root',
           ensure: 'running',
-          listen_address: '127.0.0.1',
+          listen_address: '0.0.0.0',
           listen_port: 9_180,
         },
       ].each do |parameters|

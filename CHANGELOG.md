@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 0.1.3
+
+**Bug Fixes**
+
+- Set default listen address to 0.0.0.0
+
 ## Release 0.1.2
 
 **Bug Fixes**
