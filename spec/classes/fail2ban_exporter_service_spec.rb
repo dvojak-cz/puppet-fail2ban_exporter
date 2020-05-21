@@ -49,7 +49,7 @@ describe 'fail2ban_exporter::service' do
 
           # Service
           it {
-            is_expected.to contain_file('/lib/systemd/system/fail2ban_exporter.service').with(
+            is_expected.to contain_file('/lib/systemd/system/fail2ban-exporter.service').with(
               'ensure' => s_file_ensure,
             ).with_content(
               "# THIS FILE IS MANAGED BY PUPPET
@@ -64,16 +64,16 @@ Group=#{s_group}
 Type=simple
 Environment=LISTEN_ADDRESS=#{s_listen_address}
 Environment=LISTEN_PORT=#{s_listen_port}
-ExecStart=#{s_bin_dir}/fail2ban_exporter
+ExecStart=#{s_bin_dir}/fail2ban-exporter
 Restart=on-failure
 RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
 ",
-            ).that_notifies('Service[fail2ban_exporter]')
+            ).that_notifies('Service[fail2ban-exporter]')
 
-            is_expected.to contain_service('fail2ban_exporter').with(
+            is_expected.to contain_service('fail2ban-exporter').with(
               'ensure' => s_service_ensure,
               'enable' => true,
             )

@@ -13,15 +13,15 @@
 # @param extract_command
 #  Custom command passed to the archive resource to extract the downloaded archive.
 # @param manage_user
-#  Whether to create user for fail2ban_exporter or rely on external code for that.
+#  Whether to create user for fail2ban-exporter or rely on external code for that.
 # @param manage_group
-#  Whether to create user for fail2ban_exporter or rely on external code for that.
+#  Whether to create user for fail2ban-exporter or rely on external code for that.
 # @param user
-#  User running fail2ban_exporter.
+#  User running fail2ban-exporter.
 # @param group
-#  Group under which fail2ban_exporter is running.
+#  Group under which fail2ban-exporter is running.
 # @param user_shell
-#  if requested, we create a user for fail2ban_exporter. The default shell is false. It can be overwritten to any valid path.
+#  if requested, we create a user for fail2ban-exporter. The default shell is false. It can be overwritten to any valid path.
 # @param extra_groups
 #  Add other groups to the managed user.
 # @param python_required_packages
@@ -47,29 +47,29 @@ class fail2ban_exporter::install (
   # Python dependencies
   Array[String]            $python_required_packages = $fail2ban_exporter::python_required_packages,
 ) {
-  archive { "/tmp/fail2ban_exporter-${version}.${download_extension}":
+  archive { "/tmp/fail2ban-exporter-${version}.${download_extension}":
     ensure          => 'present',
     extract         => true,
     extract_path    => $base_dir,
     source          => $download_url,
     checksum_verify => false,
-    creates         => "${base_dir}/fail2ban_exporter-${version}",
+    creates         => "${base_dir}/fail2ban-exporter-${version}",
     cleanup         => true,
     extract_command => $extract_command,
   }
   file {
-    "${base_dir}/fail2ban_exporter-${version}/fail2ban_exporter.py":
+    "${base_dir}/fail2ban-exporter-${version}/fail2ban_exporter.py":
       owner => 'root',
       group => 0, # 0 instead of root because OS X uses "wheel".
       mode  => '0555';
-    "${bin_dir}/fail2ban_exporter":
+    "${bin_dir}/fail2ban-exporter":
       ensure => link,
-      target => "${base_dir}/fail2ban_exporter-${version}/fail2ban_exporter.py";
+      target => "${base_dir}/fail2ban-exporter-${version}/fail2ban_exporter.py";
   }
 
-  Archive["/tmp/fail2ban_exporter-${version}.${download_extension}"]
-  -> File["${base_dir}/fail2ban_exporter-${version}/fail2ban_exporter.py"]
-  -> File["${bin_dir}/fail2ban_exporter"]
+  Archive["/tmp/fail2ban-exporter-${version}.${download_extension}"]
+  -> File["${base_dir}/fail2ban-exporter-${version}/fail2ban_exporter.py"]
+  -> File["${bin_dir}/fail2ban-exporter"]
 
   if $manage_user {
     ensure_resource('user', [ $user ], {

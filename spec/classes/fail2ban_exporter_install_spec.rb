@@ -51,24 +51,24 @@ describe 'fail2ban_exporter::install' do
 
           # Install
           it {
-            is_expected.to contain_archive("/tmp/fail2ban_exporter-#{s_version}.#{s_download_extension}").with(
+            is_expected.to contain_archive("/tmp/fail2ban-exporter-#{s_version}.#{s_download_extension}").with(
               'ensure'          => 'present',
               'extract'         => true,
               'extract_path'    => s_base_dir,
               'source'          => s_download_url,
               'checksum_verify' => false,
-              'creates'         => "/opt/fail2ban_exporter-#{s_version}",
+              'creates'         => "/opt/fail2ban-exporter-#{s_version}",
               'cleanup'         => true,
               'extract_command' => s_extract_command,
             )
-            is_expected.to contain_file("#{s_base_dir}/fail2ban_exporter-#{s_version}/fail2ban_exporter.py").with(
+            is_expected.to contain_file("#{s_base_dir}/fail2ban-exporter-#{s_version}/fail2ban_exporter.py").with(
               'owner'  => 'root',
               'group'  => '0',
               'mode'   => '0555',
             )
-            is_expected.to contain_file("#{s_bin_dir}/fail2ban_exporter").with(
+            is_expected.to contain_file("#{s_bin_dir}/fail2ban-exporter").with(
               'ensure' => 'link',
-              'target' => "#{s_base_dir}/fail2ban_exporter-#{s_version}/fail2ban_exporter.py",
+              'target' => "#{s_base_dir}/fail2ban-exporter-#{s_version}/fail2ban_exporter.py",
             )
 
             # User
