@@ -1,17 +1,17 @@
 # @summary  This class manages service
 #
 # @param ensure
-#  State ensured from fail2ban_exporter service.
+#  State ensured from fail2ban-exporter service.
 # @param user
-#  User running fail2ban_exporter.
+#  User running fail2ban-exporter.
 # @param group
-#  Group under which fail2ban_exporter is running.
+#  Group under which fail2ban-exporter is running.
 # @param port
 #  Fail2ban exporter port (required to be accessible).
-# @param fail2ban_host_address
-#  Fail2ban host address.
-# @param fail2ban_api_port
-#  Fail2ban api port.
+# @param listen_address
+#  Fail2ban exporter listen address (required to be accessible).
+# @param listen_port
+#  Fail2ban exporter listen port (required to be accessible).
 # @param bin_dir
 #  Directory where binaries are located.
 # @example

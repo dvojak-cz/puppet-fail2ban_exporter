@@ -87,23 +87,23 @@ Default value: `undef`
 
 Data type: `Boolean`
 
-Whether to create user for fail2ban_exporter or rely on external code for that.
+Whether to create user for fail2ban-exporter or rely on external code for that.
 
-Default value: `true`
+Default value: `false`
 
 ##### `manage_group`
 
 Data type: `Boolean`
 
-Whether to create user for fail2ban_exporter or rely on external code for that.
+Whether to create user for fail2ban-exporter or rely on external code for that.
 
-Default value: `true`
+Default value: `false`
 
 ##### `user`
 
 Data type: `String`
 
-User running fail2ban_exporter.
+User running fail2ban-exporter.
 
 Default value: 'root'
 
@@ -111,7 +111,7 @@ Default value: 'root'
 
 Data type: `String`
 
-Group under which fail2ban_exporter is running.
+Group under which fail2ban-exporter is running.
 
 Default value: 'root'
 
@@ -119,7 +119,7 @@ Default value: 'root'
 
 Data type: `Stdlib::Absolutepath`
 
-if requested, we create a user for fail2ban_exporter. The default shell is false. It can be overwritten to any valid path.
+if requested, we create a user for fail2ban-exporter. The default shell is false. It can be overwritten to any valid path.
 
 Default value: '/bin/false'
 
@@ -135,7 +135,7 @@ Default value: []
 
 Data type: `Variant[Stdlib::Ensure::Service, Enum['absent']]`
 
-State ensured from fail2ban_exporter service.
+State ensured from fail2ban-exporter service.
 
 Default value: 'running'
 
@@ -145,7 +145,7 @@ Data type: `Stdlib::Host`
 
 Fail2ban exporter listen address.
 
-Default value: '127.0.0.1'
+Default value: '0.0.0.0'
 
 ##### `listen_port`
 
@@ -240,7 +240,7 @@ Default value: $fail2ban_exporter::extract_command
 
 Data type: `Boolean`
 
-Whether to create user for fail2ban_exporter or rely on external code for that.
+Whether to create user for fail2ban-exporter or rely on external code for that.
 
 Default value: $fail2ban_exporter::manage_user
 
@@ -248,7 +248,7 @@ Default value: $fail2ban_exporter::manage_user
 
 Data type: `Boolean`
 
-Whether to create user for fail2ban_exporter or rely on external code for that.
+Whether to create user for fail2ban-exporter or rely on external code for that.
 
 Default value: $fail2ban_exporter::manage_group
 
@@ -256,7 +256,7 @@ Default value: $fail2ban_exporter::manage_group
 
 Data type: `String`
 
-User running fail2ban_exporter.
+User running fail2ban-exporter.
 
 Default value: $fail2ban_exporter::user
 
@@ -264,7 +264,7 @@ Default value: $fail2ban_exporter::user
 
 Data type: `String`
 
-Group under which fail2ban_exporter is running.
+Group under which fail2ban-exporter is running.
 
 Default value: $fail2ban_exporter::group
 
@@ -272,7 +272,7 @@ Default value: $fail2ban_exporter::group
 
 Data type: `Stdlib::Absolutepath`
 
-if requested, we create a user for fail2ban_exporter. The default shell is false. It can be overwritten to any valid path.
+if requested, we create a user for fail2ban-exporter. The default shell is false. It can be overwritten to any valid path.
 
 Default value: $fail2ban_exporter::user_shell
 
@@ -312,7 +312,7 @@ The following parameters are available in the `fail2ban_exporter::service` class
 
 Data type: `Variant[Stdlib::Ensure::Service, Enum['absent']]`
 
-State ensured from fail2ban_exporter service.
+State ensured from fail2ban-exporter service.
 
 Default value: $fail2ban_exporter::service_ensure
 
@@ -320,7 +320,7 @@ Default value: $fail2ban_exporter::service_ensure
 
 Data type: `String`
 
-User running fail2ban_exporter.
+User running fail2ban-exporter.
 
 Default value: $fail2ban_exporter::user
 
@@ -328,7 +328,7 @@ Default value: $fail2ban_exporter::user
 
 Data type: `String`
 
-Group under which fail2ban_exporter is running.
+Group under which fail2ban-exporter is running.
 
 Default value: $fail2ban_exporter::group
 

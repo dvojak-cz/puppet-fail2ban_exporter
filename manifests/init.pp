@@ -3,7 +3,7 @@
 # Init class of Fail2ban Exporter module. It can installes Fail2ban Exporter binaries and single Service.
 #
 # @param version
-#  Fail2ban exporter release. See https://github.com/anclrii/Fail2ban-Exporter/releases
+#  Fail2ban exporter release. See https://github.com/Kylapaallikko/fail2ban_exporter
 # @param base_dir
 #  Base directory where Fail2ban is extracted.
 # @param bin_dir
@@ -17,21 +17,21 @@
 # @param extract_command
 #  Custom command passed to the archive resource to extract the downloaded archive.
 # @param manage_user
-#  Whether to create user for fail2ban_exporter or rely on external code for that.
+#  Whether to create user for fail2ban-exporter or rely on external code for that.
 # @param manage_group
-#  Whether to create user for fail2ban_exporter or rely on external code for that.
+#  Whether to create user for fail2ban-exporter or rely on external code for that.
 # @param user
-#  User running fail2ban_exporter.
+#  User running fail2ban-exporter.
 # @param group
-#  Group under which fail2ban_exporter is running.
+#  Group under which fail2ban-exporter is running.
 # @param user_shell
-#  if requested, we create a user for fail2ban_exporter. The default shell is false. It can be overwritten to any valid path.
+#  if requested, we create a user for fail2ban-exporter. The default shell is false. It can be overwritten to any valid path.
 # @param extra_groups
 #  Add other groups to the managed user.
 # @param service_ensure
-#  State ensured from fail2ban_exporter service.
+#  State ensured from fail2ban-exporter service.
 # @param listen_address
-#  Fail2ban exporter listen address.
+#  Fail2ban exporter listen address (required to be accessible).
 # @param listen_port
 #  Fail2ban exporter listen port (required to be accessible).
 # @param manage_python
