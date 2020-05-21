@@ -17,19 +17,19 @@
 # @param extract_command
 #  Custom command passed to the archive resource to extract the downloaded archive.
 # @param manage_user
-#  Whether to create user for fail2ban_exporter or rely on external code for that.
+#  Whether to create user for fail2ban-exporter or rely on external code for that.
 # @param manage_group
-#  Whether to create user for fail2ban_exporter or rely on external code for that.
+#  Whether to create user for fail2ban-exporter or rely on external code for that.
 # @param user
-#  User running fail2ban_exporter.
+#  User running fail2ban-exporter.
 # @param group
-#  Group under which fail2ban_exporter is running.
+#  Group under which fail2ban-exporter is running.
 # @param user_shell
-#  if requested, we create a user for fail2ban_exporter. The default shell is false. It can be overwritten to any valid path.
+#  if requested, we create a user for fail2ban-exporter. The default shell is false. It can be overwritten to any valid path.
 # @param extra_groups
 #  Add other groups to the managed user.
 # @param service_ensure
-#  State ensured from fail2ban_exporter service.
+#  State ensured from fail2ban-exporter service.
 # @param listen_address
 #  Fail2ban exporter listen address.
 # @param listen_port

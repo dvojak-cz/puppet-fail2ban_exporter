@@ -9,6 +9,7 @@ First major release
 **Bug Fixes**
 
 - Remove default management of root user and group
+- Service naming correction
 
 ## Release 0.1.3
 

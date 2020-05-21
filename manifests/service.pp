@@ -1,11 +1,11 @@
 # @summary  This class manages service
 #
 # @param ensure
-#  State ensured from fail2ban_exporter service.
+#  State ensured from fail2ban-exporter service.
 # @param user
-#  User running fail2ban_exporter.
+#  User running fail2ban-exporter.
 # @param group
-#  Group under which fail2ban_exporter is running.
+#  Group under which fail2ban-exporter is running.
 # @param port
 #  Fail2ban exporter port (required to be accessible).
 # @param fail2ban_host_address

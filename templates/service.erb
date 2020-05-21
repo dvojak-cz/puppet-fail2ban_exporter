@@ -10,7 +10,7 @@ Group=<%= @group %>
 Type=simple
 Environment=LISTEN_ADDRESS=<%= @listen_address %>
 Environment=LISTEN_PORT=<%= @listen_port %>
-ExecStart=<%= @bin_dir %>/fail2ban_exporter
+ExecStart=<%= @bin_dir %>/fail2ban-exporter
 Restart=on-failure
 RestartSec=5s
 
