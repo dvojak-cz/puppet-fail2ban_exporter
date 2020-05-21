@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.0.1
+
+**Bug Fixes**
+
+- Fix test naming
+- Fix documentation
+
 ## Release 1.0.0
 
 First major release
