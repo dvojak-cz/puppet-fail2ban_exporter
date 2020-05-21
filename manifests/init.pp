@@ -53,8 +53,8 @@ class fail2ban_exporter (
   Optional[String]                                 $extract_command          = undef,
 
   # User Management
-  Boolean                                          $manage_user              = true,
-  Boolean                                          $manage_group             = true,
+  Boolean                                          $manage_user              = false,
+  Boolean                                          $manage_group             = false,
   String                                           $user                     = 'root',
   String                                           $group                    = 'root',
   Stdlib::Absolutepath                             $user_shell               = '/bin/false',

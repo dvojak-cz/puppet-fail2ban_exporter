@@ -34,15 +34,15 @@ class fail2ban_exporter::service (
     default   => stopped,
   }
 
-  file { '/lib/systemd/system/fail2ban_exporter.service':
+  file { '/lib/systemd/system/fail2ban-exporter.service':
     ensure  => $_file_ensure,
     content => template('fail2ban_exporter/service.erb'),
-    notify  => Service['fail2ban_exporter']
+    notify  => Service['fail2ban-exporter']
   }
-  service { 'fail2ban_exporter':
+  service { 'fail2ban-exporter':
     ensure => $_service_ensure,
     enable => true,
   }
 
-  File['/lib/systemd/system/fail2ban_exporter.service'] -> Service['fail2ban_exporter']
+  File['/lib/systemd/system/fail2ban-exporter.service'] -> Service['fail2ban-exporter']
 }

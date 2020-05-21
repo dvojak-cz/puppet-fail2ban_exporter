@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.0.0
+
+First major release
+
+**Bug Fixes**
+
+- Remove default management of root user and group
+
 ## Release 0.1.3
 
 **Bug Fixes**
